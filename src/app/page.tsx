@@ -1,4 +1,4 @@
-import HeroSection from "@/components/HeroSection";
+ import HeroSection from "@/components/HeroSection";
 import AdditionalSection from "@/components/AdditionalSection";
 import ImageGridSection from "@/components/ImageGridSection";
 import SliderSection from "@/components/SliderSection";

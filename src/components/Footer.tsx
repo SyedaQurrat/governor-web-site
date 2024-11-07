@@ -1,5 +1,5 @@
+'use client';
 import React from 'react';
-
 const Footer: React.FC = () => {
   return (
     <footer className="w-full bg-gray-100 text-black py-20 px-24">

@@ -1,3 +1,4 @@
+'use client';
 const AdditionalSection: React.FC = () => {
     return (
       <div className="xl:w-[1300px] lg:w-[90%] w-[95%] m-auto sm:mt-20 mt-10 border-b border-zinc-300 pb-10">

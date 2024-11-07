@@ -1,5 +1,7 @@
-                                                                                                                                                                                  "use client";
+'use client';
 import React, { useState } from "react";
+import Link from 'next/link';  // Import Link from next/link
+import Image from 'next/image'; 
 
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -18,11 +20,11 @@ const Navbar = () => {
       <nav className="bg-sky-900 text-sky-200 h-20 px-6 sm:px-12 md:px-20 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center">
-          <img
+          <Image
             alt="logo"
             loading="lazy"
-            width="90"
-            height="113"
+            width={90}
+            height={113}
             decoding="async"
             className="w-[70px] sm:mt-20 sm:w-[80px] md:w-[90px]"
             style={{ color: "transparent" }}
@@ -78,24 +80,16 @@ const Navbar = () => {
         >
           <ul className="flex flex-col sm:flex-row pt-4 sm:pt-0 space-y-2 sm:space-y-0 sm:space-x-10 text-white text-center w-full sm:w-auto">
             <li>
-              <a href="/" className="transition duration-300 ease-in-out">
-                Home
-              </a>
+              <Link href="/" className="transition duration-300 ease-in-out">Home</Link>
             </li>
             <li>
-              <a href="/apply" className="transition duration-300 ease-in-out">
-                Apply
-              </a>
+              <Link href="/apply" className="transition duration-300 ease-in-out">Apply</Link>
             </li>
             <li>
-              <a href="/jobs" className="transition duration-300 ease-in-out">
-                Jobs
-              </a>
+              <Link href="/jobs" className="transition duration-300 ease-in-out">Jobs</Link>
             </li>
             <li>
-              <a href="/result-checker" className="transition duration-300 ease-in-out">
-                Result
-              </a>
+              <Link href="/result-checker" className="transition duration-300 ease-in-out">Result</Link>
             </li>
             <li className="relative">
               <button
@@ -104,9 +98,7 @@ const Navbar = () => {
               >
                 Courses
                 <svg
-                  className={`ml-1 w-4 h-4 transform transition-transform ${
-                    isDropdownOpen ? "rotate-180" : "rotate-0"
-                  }`}
+                  className={`ml-1 w-4 h-4 transform transition-transform ${isDropdownOpen ? "rotate-180" : "rotate-0"}`}
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -124,13 +116,13 @@ const Navbar = () => {
                     <h3 className="font-bold">Core Courses</h3>
                     <ul className="ml-4 mt-2 space-y-1">
                       <li>
-                        <a href="#">Programming Fundamentals</a>
+                        <Link href="#">Programming Fundamentals</Link>
                       </li>
                       <li>
-                        <a href="#">Web2 Using NextJS</a>
+                        <Link href="#">Web2 Using NextJS</Link>
                       </li>
                       <li>
-                        <a href="#">Earn as You Learn</a>
+                        <Link href="#">Earn as You Learn</Link>
                       </li>
                     </ul>
                   </div>
@@ -138,22 +130,22 @@ const Navbar = () => {
                     <h3 className="font-bold">Advanced Courses</h3>
                     <ul className="ml-4 mt-2 space-y-1">
                       <li>
-                        <a href="#">Web 3 and Metaverse</a>
+                        <Link href="#">Web 3 and Metaverse</Link>
                       </li>
                       <li>
-                        <a href="#">Cloud-Native Computing</a>
+                        <Link href="#">Cloud-Native Computing</Link>
                       </li>
                       <li>
-                        <a href="#">AI and Deep Learning</a>
+                        <Link href="#">AI and Deep Learning</Link>
                       </li>
                       <li>
-                        <a href="#">Ambient Computing and IoT</a>
+                        <Link href="#">Ambient Computing and IoT</Link>
                       </li>
                       <li>
-                        <a href="#">Bioinformatics</a>
+                        <Link href="#">Bioinformatics</Link>
                       </li>
                       <li>
-                        <a href="#">Network Automation</a>
+                        <Link href="#">Network Automation</Link>
                       </li>
                     </ul>
                   </div>
@@ -168,3 +160,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

@@ -1,5 +1,5 @@
+'use client';
 import React from 'react';
-
 const CourseSection: React.FC = () => {
   return (
     <div className="xl:w-[1300px] lg:w-[90%] w-[95%] m-auto mt-10 mb-10">
