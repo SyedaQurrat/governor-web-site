@@ -58,54 +58,56 @@ const Apply = () => {
         </div>
       </div>
 
+   
       {/* Horizontal Progress Bar */}
-      <div className="flex justify-center items-center mt-4 mb-6 w-full">
-        <div className="flex items-center justify-between w-[90%] lg:w-[800px] space-x-6">
-          {/* Step 1 */}
-          <div className="flex items-center space-x-2">
-            <div className="flex items-center justify-center w-8 h-8 rounded-full bg-sky-600 text-white">
-              1
-            </div>
-            <span className="text-sky-800">Facebook</span>
-          </div>
-          <div className="flex-grow h-px bg-gray-500"></div>
-
-          {/* Step 2 */}
-          <div className="flex items-center space-x-2">
-            <div className="flex items-center justify-center w-8 h-8 rounded-full bg-white text-sky-800 border-2  border-gray-400">
-              2
-            </div>
-            <span className="text-sky-800">YouTube</span>
-          </div>
-          <div className="flex-grow h-px bg-gray-500"></div>
-
-          {/* Step 3 */}
-          <div className="flex items-center space-x-2">
-            <div className="flex items-center justify-center w-8 h-8 rounded-full bg-white text-sky-800 border-2  border-gray-400">
-              3
-            </div>
-            <span className="text-sky-800">Twitter</span>
-          </div>
-          <div className="flex-grow h-px bg-gray-500"></div>
-
-          {/* Step 4 */}
-          <div className="flex items-center space-x-2">
-            <div className="flex items-center justify-center w-8 h-8 rounded-full  bg-white text-sky-800 border-2  border-gray-400">
-              4
-            </div>
-            <span className="text-sky-800">Instagram</span>
-          </div>
-          <div className="flex-grow h-px bg-gray-500"></div>
-
-          {/* Step 5 */}
-          <div className="flex items-center space-x-2">
-            <div className="flex items-center justify-center w-8 h-8 rounded-full bg-white text-sky-800 border-2  border-gray-400">
-              5
-            </div>
-            <span className="text-sky-800">Apply</span>
-          </div>
-        </div>
+<div className="flex justify-center items-center mt-4 mb-6 w-full">
+  <div className="flex items-center justify-between w-[90%] max-w-[800px] space-x-4 sm:space-x-6 overflow-x-auto">
+    {/* Step 1 */}
+    <div className="flex items-center space-x-2 flex-shrink-0">
+      <div className="flex items-center justify-center w-8 h-8 rounded-full bg-sky-600 text-white">
+        1
       </div>
+      <span className="text-sky-800 text-sm sm:text-base">Facebook</span>
+    </div>
+    <div className="flex-grow h-px bg-gray-500 hidden sm:block"></div>
+
+    {/* Step 2 */}
+    <div className="flex items-center space-x-2 flex-shrink-0">
+      <div className="flex items-center justify-center w-8 h-8 rounded-full bg-white text-sky-800 border-2 border-gray-400">
+        2
+      </div>
+      <span className="text-sky-800 text-sm sm:text-base">YouTube</span>
+    </div>
+    <div className="flex-grow h-px bg-gray-500 hidden sm:block"></div>
+
+    {/* Step 3 */}
+    <div className="flex items-center space-x-2 flex-shrink-0">
+      <div className="flex items-center justify-center w-8 h-8 rounded-full bg-white text-sky-800 border-2 border-gray-400">
+        3
+      </div>
+      <span className="text-sky-800 text-sm sm:text-base">Twitter</span>
+    </div>
+    <div className="flex-grow h-px bg-gray-500 hidden sm:block"></div>
+
+    {/* Step 4 */}
+    <div className="flex items-center space-x-2 flex-shrink-0">
+      <div className="flex items-center justify-center w-8 h-8 rounded-full bg-white text-sky-800 border-2 border-gray-400">
+        4
+      </div>
+      <span className="text-sky-800 text-sm sm:text-base">Instagram</span>
+    </div>
+    <div className="flex-grow h-px bg-gray-500 hidden sm:block"></div>
+
+    {/* Step 5 */}
+    <div className="flex items-center space-x-2 flex-shrink-0">
+      <div className="flex items-center justify-center w-8 h-8 rounded-full bg-white text-sky-800 border-2 border-gray-400">
+        5
+      </div>
+      <span className="text-sky-800 text-sm sm:text-base">Apply</span>
+    </div>
+  </div>
+</div>
+
 
       <Footer />
     </div>

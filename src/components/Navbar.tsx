@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from "react";
-import Link from 'next/link';  // Import Link from next/link
-import Image from 'next/image'; 
+import Link from 'next/link';
+import Image from 'next/image';
 
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -17,31 +17,30 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="bg-sky-900 text-sky-200 h-20 px-6 sm:px-12 md:px-20 flex justify-between items-center">
+      <nav className="bg-sky-900 text-sky-200 h-20 px-4 sm:px-8 md:px-16 flex justify-between items-center">
         {/* Logo */}
-        <div className="flex items-center">
+        <div className="flex items-center mt-16">
           <Image
             alt="logo"
             loading="lazy"
-            width={90}
-            height={113}
+            width={70}
+            height={90}
             decoding="async"
-            className="w-[70px] sm:mt-20 sm:w-[80px] md:w-[90px]"
-            style={{ color: "transparent" }}
+            className="w-[60px] sm:w-[70px] md:w-[80px]"
             src="/images/logo.jpg"
           />
         </div>
 
         {/* Heading section for larger screens */}
-        <div className="hidden sm:block flex-auto ml-10">
-          <h1 className="text-xl font-semibold text-sky-100">
+        <div className="hidden sm:block flex-auto ml-4 md:ml-10 text-center">
+          <h1 className="text-lg md:text-xl font-semibold text-sky-100">
             Tuition Free Education Program on Latest Technologies
           </h1>
         </div>
 
         {/* Mobile Heading */}
-        <div className="sm:hidden">
-          <h1 className="text-lg font-semibold">Tuition Free Program</h1>
+        <div className="sm:hidden text-center">
+          <h1 className="text-base font-semibold">Tuition Free Program</h1>
         </div>
 
         {/* Mobile menu button (hamburger) */}
@@ -76,25 +75,25 @@ const Navbar = () => {
         <div
           className={`${
             isMenuOpen ? "block" : "hidden"
-          } sm:flex sm:space-x-10 justify-end items-center sm:w-auto bg-sky-900`}
+          } sm:flex sm:space-x-8 flex-col sm:flex-row bg-sky-900 sm:bg-transparent absolute sm:static w-full sm:w-auto top-20 left-0 sm:top-auto p-4 sm:p-0 z-10`}
         >
-          <ul className="flex flex-col sm:flex-row pt-4 sm:pt-0 space-y-2 sm:space-y-0 sm:space-x-10 text-white text-center w-full sm:w-auto">
+          <ul className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6 text-white text-center w-full sm:w-auto">
             <li>
-              <Link href="/" className="transition duration-300 ease-in-out">Home</Link>
+              <Link href="/" className="transition duration-300 ease-in-out hover:text-sky-300">Home</Link>
             </li>
             <li>
-              <Link href="/apply" className="transition duration-300 ease-in-out">Apply</Link>
+              <Link href="/apply" className="transition duration-300 ease-in-out hover:text-sky-300">Apply</Link>
             </li>
             <li>
-              <Link href="/jobs" className="transition duration-300 ease-in-out">Jobs</Link>
+              <Link href="/jobs" className="transition duration-300 ease-in-out hover:text-sky-300">Jobs</Link>
             </li>
             <li>
-              <Link href="/result-checker" className="transition duration-300 ease-in-out">Result</Link>
+              <Link href="/result-checker" className="transition duration-300 ease-in-out hover:text-sky-300">Result</Link>
             </li>
             <li className="relative">
               <button
                 onClick={toggleDropdown}
-                className="cursor-pointer flex items-center text-white font-bold"
+                className="cursor-pointer flex items-center text-white font-bold hover:text-sky-300"
               >
                 Courses
                 <svg
@@ -111,7 +110,7 @@ const Navbar = () => {
                 </svg>
               </button>
               {isDropdownOpen && (
-                <div className="absolute left-0 sm:left-auto bg-white text-black p-4 rounded shadow-lg mt-1 w-full sm:w-72">
+                <div className="absolute left-0 sm:left-auto bg-white text-black p-4 rounded shadow-lg mt-1 w-full sm:w-72 z-20">
                   <div>
                     <h3 className="font-bold">Core Courses</h3>
                     <ul className="ml-4 mt-2 space-y-1">
@@ -160,4 +159,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
